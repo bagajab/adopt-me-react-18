@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Adopt Me!</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <div id="root">Not Rendered</div>
@@ -13,13 +13,16 @@
     <script src="https://unpkg.com/react-dom@18.2.0/umd/react-dom.development.js"></script>
 
     <script>
-        const App = () => {
-            React.createElement(
-                "div",
-                {id: "bagaja-id"},
-                React.createElement("h1", {}, "Adopt Me!")
-            )
-        }
+      const App = () => {
+        return React.createElement(
+          "div",
+          {},
+          React.createElement("h1", {}, "Adopt Me!")
+        );
+      };
+      const container = document.getElementById("root");
+      const root = ReactDOM.createRoot(container);
+      root.render(React.createElement(App));
     </script>
   </body>
 </html>
